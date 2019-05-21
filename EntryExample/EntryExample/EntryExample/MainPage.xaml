@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EntryExample"
+             x:Class="EntryExample.MainPage">
+
+    <StackLayout>
+        <Label Text="Exception occours only if the Xamarin.Froms.Material NuGet package is installed on the false project."/>
+        <Entry Placeholder="This should not raise an exception" Visual="Material"/>
+        <Label Text="By not using aapt2 and installed Xamarin.Forms.Material only on the platform independet project, the material design works."/>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Using the "/>
+                    <Span Text="documentation">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Span.GestureRecognizers>
+                    </Span>
+                    <Span Text=" you should install Xamarin.Froms.Material on the android project, then aapt2 works."/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
